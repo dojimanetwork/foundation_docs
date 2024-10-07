@@ -1,0 +1,30 @@
+---
+title: 'Architecture'
+description: 'Example section for showcasing API endpoints.'
+---
+
+![image.png](/images/ragno.webp)
+
+The main aim of ragno network(other than providing data to dojima cross-chain protocol) is to power data for several protocols in a fast, efficient and decentralised manner.
+
+### Crawler
+
+![image.png](/images/Crawler.webp)
+
+- Crawler node is server that is coupled with a hermes node using a secure bridge in between these two nodes(hermes and crawler nodes).
+- This node is responsible for accessing data from different chains and filters dojima x-chain transactions, These filtered transactions are sent to hermes for further processing.
+- Crawler nodes access data from operators through their gateway servers.
+
+### Operator dashboard
+
+![image.png](/images/operator-dashboard.webp)
+
+- The operator dashboard is one of the crucial component of the ragno network.
+- It provides a user-friendly interface for operators to manage their nodes, monitor performance, and interact with the network. Through this dashboard, operators can register new nodes, view their current status, and track their rewards earned from participating in the network.
+
+### Operator gateway server
+
+- The operator gateway server acts as an intermediary between the crawler nodes and the operator's blockchain nodes.
+- It provides a secure and efficient way for crawlers to access blockchain data from the operators' nodes.
+- This server implements rate limiting, authentication, and caching to ensure fair and reliable access to the data.
+- By using a gateway server, operators can maintain better control over their node resources while still participating in the Ragno network.
