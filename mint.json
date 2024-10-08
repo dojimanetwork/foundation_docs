@@ -1,5 +1,4 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
   "name": "Dojima Docs",
   "logo": {
     "dark": "/logo/Ragno-dark.png",
@@ -33,6 +32,12 @@
       "pages": [
         "ragno/developer-docs/architecture",
         "ragno/developer-docs/working"
+      ]
+    },
+    {
+      "group":"",
+      "pages": [
+        "ragno/add-your-chain"
       ]
     }
   ],
