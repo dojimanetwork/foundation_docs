@@ -1,0 +1,40 @@
+---
+title: 'How it Works'
+description: 'Example section for showcasing API endpoints.'
+---
+### Working of the above setup
+
+- Every actor(operator, crawler) in the cross-chain protocol has given a identity on hermes chain.
+- Hermes onboards operators who run nodes of different chains.
+- Operators run nodes of their choice and register them back on hermes chain.
+- Hermes periodically(for every 200 blocks) maps crawlers and operators.
+- Crawler node can only request blocks from mapped operator servers.
+- Crawlers fetch data from operators and filters dojima x-chain transactions.
+- Crawlers batch x-chain transactions and send them to hermes chain for further processing.
+- Operators claim their rewards for work done(work done is calculated based on compute units).
+
+### Operator onboarding
+
+![image.png](/images/operator-onboarding.webp)
+
+- Operator stakes $DOJ tokens using createOperator functionality.
+- Once the operator gets added in operator set they host nodes of their choice.
+- Every time they run a new node it is updated on hermes through operator dashboard.
+- Operator related events are filtered by crawler nodes and stored locally(Any change in operator set is updated locally).
+
+### Crawler node fetching block data from operators
+
+The below component diagram depicts how crawler nodes fetch data from operators.
+
+![image.png](/images/Crawler.webp)
+
+- The crawler nodes periodically query the operators for new data using a pull-based mechanism.
+- Hermes publishes pairing list for every 200 blocks.
+- Pairing list states which crawler nodes need to query which operators for blockchain data.
+- Based on that crawler nodes fetch blocks and transactions.
+
+### Pairing algorithm
+
+### Rewards
+
+### Compute units calculation
