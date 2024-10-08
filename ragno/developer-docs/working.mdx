@@ -1,26 +1,21 @@
 ---
 title: 'How it Works'
-description: 'Example section for showcasing API endpoints.'
 ---
-### Working of the above setup
-
-- Every actor(operator, crawler) in the cross-chain protocol has given a identity on hermes chain.
-- Hermes onboards operators who run nodes of different chains.
-- Operators run nodes of their choice and register them back on hermes chain.
-- Hermes periodically(for every 200 blocks) maps crawlers and operators.
-- Crawler node can only request blocks from mapped operator servers.
-- Crawlers fetch data from operators and filters dojima x-chain transactions.
-- Crawlers batch x-chain transactions and send them to hermes chain for further processing.
-- Operators claim their rewards for work done(work done is calculated based on compute units).
-
 ### Operator onboarding
-
 ![image.png](/images/operator-onboarding.webp)
 
-- Operator stakes $DOJ tokens using createOperator functionality.
-- Once the operator gets added in operator set they host nodes of their choice.
-- Every time they run a new node it is updated on hermes through operator dashboard.
-- Operator related events are filtered by crawler nodes and stored locally(Any change in operator set is updated locally).
+### **Steps to Onboard an Operator**:
+1. **Staking $DOJ Tokens**:
+    - The operator stakes $DOJ tokens using the `createOperator` functionality.
+    - Once the stake is made, the operator is added to the **operator set** in the Hermes chain.
+2. **Hosting Blockchain Nodes**:
+    - After onboarding, operators host blockchain nodes of their choice.
+    - These nodes are registered and managed through the **Operator Dashboard**.
+3. **Node Updates**:
+    - Whenever a new node is added or updated by an operator, the information is recorded on the Hermes chain via the dashboard.
+4. **Crawler Node Tracking**:
+    - Crawler nodes continuously monitor the Hermes chain for operator-related events, such as node changes or operator set updates.
+    - These events are filtered and stored locally by the crawler nodes to ensure efficient data querying and synchronization.
 
 ### Crawler node fetching block data from operators
 
@@ -28,13 +23,21 @@ The below component diagram depicts how crawler nodes fetch data from operators.
 
 ![image.png](/images/Crawler.webp)
 
-- The crawler nodes periodically query the operators for new data using a pull-based mechanism.
-- Hermes publishes pairing list for every 200 blocks.
-- Pairing list states which crawler nodes need to query which operators for blockchain data.
-- Based on that crawler nodes fetch blocks and transactions.
+### **Data Fetching Process**:
+
+1. **Pull-Based Mechanism**:
+    - **Crawler nodes** operate on a pull-based mechanism, periodically querying the operators for the latest blockchain data.
+2. **Hermes Pairing List**:
+    - Every **200 blocks**, the Hermes chain publishes a **Pairing List** (PL).
+    - This list assigns specific crawler nodes to operators, detailing which crawlers should query which operators for blockchain data.
+3. **Data Requests**:
+    - Based on the PL, crawler nodes fetch block and transaction data from the mapped operator's nodes.
+    - This data is then processed by the crawlers to filter Dojima cross-chain transactions, which are sent to Hermes for further validation and processing.
 
 ### Pairing algorithm
 
-### Rewards
+(TBA)
 
 ### Compute units calculation
+
+(TBA)

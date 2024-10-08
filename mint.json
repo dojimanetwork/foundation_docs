@@ -1,5 +1,4 @@
 {
-  
   "$schema": "https://mintlify.com/schema.json",
   "name": "Dojima Docs",
   "logo": {
@@ -22,18 +21,18 @@
       "url": "ragno"
     }
   ],
-
   "navigation": [
-   
     {
       "group": "Ragno Introduction",
       "pages": [
-        "ragno/overview",
-        {
-          "group": "Developers",
-          "pages": ["ragno/developer-docs/architecture",
-          "ragno/developer-docs/working"]
-        }
+        "ragno/overview"
+      ]
+    },
+    {
+      "group": "Developers",
+      "pages": [
+        "ragno/developer-docs/architecture",
+        "ragno/developer-docs/working"
       ]
     }
   ],
@@ -42,8 +41,8 @@
     "github": "https://github.com/dojimanetwork",
     "linkedin": "https://www.linkedin.com/company/81682016/admin/dashboard/",
     "youtube": "https://www.youtube.com/@DojimaNetwork",
-    "medium":"https://medium.com/dojimanetwork",
-    "telegram":"https://t.me/dojimanetworkofficial",
-    "discord":"https://discord.com/invite/6fQWukdgbM"
+    "medium": "https://medium.com/dojimanetwork",
+    "telegram": "https://t.me/dojimanetworkofficial",
+    "discord": "https://discord.com/invite/6fQWukdgbM"
   }
 }
