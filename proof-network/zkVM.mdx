@@ -2,13 +2,16 @@
 title: 'zkVM'
 ---
 
-A Zero-Knowledge Virtual Machine (zkVM) is a system that allows developers to prove that a program has executed correctly without revealing any details about the actual computation. Imagine it like this: you write a program in Rust (or another LLVM-compatible language) that performs a calculation, such as finding the 10th Fibonacci number.
+A zkVM (Zero-Knowledge Virtual Machine) is a system that allows developers to prove that a program has executed correctly without revealing any details about the actual computation. Imagine it like this: you write a program in Rust (or another LLVM-compatible language) that performs a calculation, such as finding the 10th Fibonacci number.
 
 Here's how it works:
 
 1. **Write and Compile the Program**: The program is compiled into an executable format (ELF).
+
 2. **Key Setup**: The zkVM creates special cryptographic keys, one for proving and another for verifying.
+
 3. **Generate a Proof**: The zkVM runs the program with input data, generating a proof that the computation was done correctly.
+
 4. **Verify the Proof**: Anyone can then use the verification key to check the proof, confirming that the program's output is correct without seeing the actual input or intermediate steps.
 
 This process ensures privacy and trustworthiness in various applications, making it possible to verify complex computations securely.
