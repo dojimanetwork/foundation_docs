@@ -1,0 +1,61 @@
+---
+title: 'Hermes Layer'
+---
+
+The **Hermes Layer** is the core interoperability and liquidity management module of the Omnichain Engine, ensuring smooth cross-chain interactions.
+
+### **Key Responsibilities**
+
+1. **Liquidity Management**
+    - Oversees native token liquidity from all blockchains.
+    - Manages staking and rewards for liquidity providers.
+2. **Validator Operations**
+    - Ensures validator functionality, slashing mechanisms, and network security.
+3. **Fee Collection and Distribution**
+    - Collects transaction fees and redistributes them efficiently within the network.
+4. **Universal Cross-Chain Liquidity Access**
+    - Offers developers access to liquidity across chains for seamless integration and operation.
+
+### **Main Modules**
+
+1. **Narada**
+    - Connects clients to the Hermes Layer.
+    - Monitors blockchain events (e.g., token swaps between chains) and relays them to the Hermes Layer in a compatible format.
+2. **Threshold Signature Scheme (TSS)**
+    - Secures liquidity held in the Hermes Layer.
+    - Supports various signature mechanisms, including ECDSA, RSA, and ed25519.
+3. **Fortunas**
+    - Vaults holding liquidity of multiple tokens.
+    - Ensures liquidity release through validator signatures (⅔ quorum).
+4. **Sors**
+    - Handles small token swap amounts efficiently, mitigating delays in TSS processes.
+
+
+# Endpoint Resources in Dojima Network
+
+
+## Testnet
+
+
+| **Field**                         	 | **Testnet**               	            |
+|-------------------------------------|----------------------------------------|
+| **Network Name**                  	 | Hermes Dojima   	                      |
+| **Http Api URL**                    | https://api-test-h4s.dojima.network/   |
+| **New RPC URL**                   	 | https://rpc-test-h4s.dojima.network/   |
+| **Chain ID**                      	 | h4s-184-d11k                      	 |
+| **Currency symbol**    	            | DOJ                       	            |
+| **Block Explorer URL** 	          | https://hermes-test.dojima.network/    | 
+
+
+## Stagenet
+
+
+| **Field**                           | **Stagenet**               	           |
+|-------------------------------------|----------------------------------------|
+| **Network Name**                    | Hermes Dojima   	                   |
+| **Http Api URL**                    | https://api-h4s.dojima.network/        |
+| **New RPC URL**                     | https://rpc-h4s.dojima.network/        |
+| **Chain ID**                        | h4s-187-d11k                  |
+| **Currency symbol**    	          | DOJ                       	           |
+| **Block Explorer URL** 	          | https://hermes.dojima.network/    | 
+ 

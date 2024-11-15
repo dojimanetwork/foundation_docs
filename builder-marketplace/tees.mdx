@@ -1,0 +1,27 @@
+---
+title: 'TEEs'
+---
+
+## Integration
+
+1. **Secure Intent Execution**:
+Intent protocols and AI agents are deployed within a TEE, where they perform computations in a protected enclave. This enclave is isolated from the main operating system, reducing the risk of data exposure or tampering. When user intents are processed, TEEs generate an attestation report. This report provides a cryptographic proof that the computation was executed securely and without interference, validating the integrity of the outcome.
+2. **Builder Marketplace Integration**:
+The Builder Marketplace integrates with multiple TEE systems, offering specialized endpoints and adapters tailored for AI models, intent protocols, and traditional web2 applications. These endpoints allow various apps to interact seamlessly with the decentralized ecosystem of Omnichain Web, providing a secure interface for cross-chain transactions. 
+    
+    There will be a peer-to-peer network of solvers where each solver is a specialized solver or have ability to solve complex intent. Upon receiving complex intent, a solver collaborates with other solver to find a solution for the intent and execute it. These solvers will be deployed in TEE. The use of TEEs ensures that data processed by these solver remains confidential, even during complex computations.
+    
+3. **Support for Multiple TEE Systems**:
+    - **Rust-based TEE using Teaclave TrustZone SDK**: This TEE setup is ideal for Rust developers. It utilizes the Teaclave TrustZone SDK on a QEMUv8 platform, leveraging ARM TrustZone's capabilities. This allows developers to build secure, efficient applications in Rust, with the TEE providing a safe environment for handling sensitive data.
+    - **JavaScript-based TEE using WASM and Intel SGX**: For JavaScript developers, the Builder Marketplace offers a TEE system based on Intel SGX, integrated with a WebAssembly (WASM) engine. This setup, similar to Phala Network’s approach, enables secure execution of JavaScript applications within a TEE, leveraging Intel SGX’s hardware-level security features.
+4. **Mempool Aggregator and Transaction Bundling**:
+Once the solver completes the secure execution of an intent, the generated attestation report along with transaction is sent to the Builder Marketplace's Mempool Aggregator. The Mempool Aggregator validates the attestation, ensuring that the transaction was securely processed within a TEE. After verification, the aggregator bundles these transactions together, optimizing them for efficient processing by OmniRollups. This bundling mechanism reduces latency and enhances throughput, enabling scalable execution of cross-chain intents.
+
+### Advantages
+
+By deploying intent protocols, AI agents and solvers within TEEs, the Builder Marketplace addresses key challenges in the decentralized ecosystem, such as data security and trust. TEEs protect against tampering and provide verifiable proof of secure execution, which is crucial for sensitive transactions involving cross-chain interactions. Additionally, supporting multiple TEE systems enhances developer flexibility, accommodating various programming languages and use cases, thus facilitating broader adoption of the platform.
+
+In the context of the Omnichain Solver using a Trusted Execution Environment (TEE), the process of generating TEE-proof is significantly more efficient than Zero-Knowledge Proof (ZKP), which requires predefined circuits for each program. Here’s how it works for the Omnichain Solver:
+
+
+
