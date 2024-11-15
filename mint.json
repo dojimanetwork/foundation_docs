@@ -1,8 +1,8 @@
 {
   "name": "Dojima Docs",
   "logo": {
-    "dark": "/logo/Ragno-dark.png",
-    "light": "/logo/Ragno-light.png"
+    "dark": "/logo/logo-dark.png",
+    "light": "/logo/logo-light.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -14,7 +14,22 @@
       "to": "#07C983"
     }
   },
+  "primaryTab": {
+    "name": "Home"
+  },
   "tabs": [
+    {
+      "name": "Builder Marketplace",
+      "url": "builder-marketplace"
+    },
+    {
+      "name": "Proof Network",
+      "url": "proof-network"
+    },
+    {
+      "name": "Omnichain Engine",
+      "url": "omnichain-engine"
+    },
     {
       "name": "Ragno",
       "url": "ragno"
@@ -22,10 +37,21 @@
   ],
   "navigation": [
     {
-      "group": "Ragno Introduction",
+      "group": "Overview",
+      "pages": ["introduction", "build-omnichain-webstack"]
+    },
+    {
+      "group": "Omnichain Web",
       "pages": [
-        "ragno/overview"
+        "ragno-network",
+        "proof-network",
+        "omnichain-stack",
+        "builder-marketplace"
       ]
+    },
+    {
+      "group": "Ragno Introduction",
+      "pages": ["ragno/overview"]
     },
     {
       "group": "Developers",
@@ -35,10 +61,28 @@
       ]
     },
     {
-      "group":"Join Us",
-      "pages": [
-        "ragno/add-your-chain"
-      ]
+      "group": "Join Us",
+      "pages": ["ragno/add-your-chain"]
+    },
+    {
+      "group": "Overview",
+      "pages": ["proof-network/overview","proof-network/zkVM","proof-network/proof-systems","proof-network/modular-zkVM"]
+    },
+    {
+      "group": "Overview",
+      "pages": ["builder-marketplace/overview","builder-marketplace/tees","builder-marketplace/proof-generation"]
+    },
+    {
+      "group": "Omni Dapps",
+      "pages": ["builder-marketplace/omni-dapps/build-project","builder-marketplace/omni-dapps/deploy-project"]
+    },
+    {
+      "group": "Omni Rollups",
+      "pages": ["builder-marketplace/omni-rollups/FLOW"]
+    },
+    {
+      "group": "Ominichain Engine",
+      "pages": ["omnichain-engine/overview","omnichain-engine/dojima-chain","omnichain-engine/hermes-layer","omnichain-engine/modules"]
     }
   ],
   "footerSocials": {
