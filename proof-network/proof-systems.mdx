@@ -1,23 +1,49 @@
 ---
-title: 'Proof System'
+title: "Proof System"
 ---
+
+The overall goal of Proof Network is to build a versatile prover network that supports multiple proof systems, allowing applications to choose the most suitable proof system based on their specific requirements. Below are the list of proof systems we are working towards initially supporting.
+
+---
+title: "Proof System"
+---
+
 1. **Groth16**:
-    - **Type**: SNARK (Succinct Non-Interactive Argument of Knowledge)
-    - **Features**: Requires a trusted setup for each program, has very small proof sizes, and fast verification times.
-    - **Use Case**: Ideal for cases needing minimal proof size but requires a trusted setup, like zk-SNARKs on Ethereum.
+
+   * **Type**: SNARK (Succinct Non-Interactive Argument of Knowledge)
+
+   * **Features**: Requires a trusted setup for each program, has very small proof sizes, and fast verification times.
+
+   * **Use Case**: Ideal for cases needing minimal proof size but requires a trusted setup, like zk-SNARKs on Ethereum.
+
 2. **Plonk**:
-    - **Type**: Universal SNARK
-    - **Features**: Requires a single trusted setup for multiple programs, supports polynomial commitments. Can use FRI for post-quantum security.
-    - **Use Case**: Suitable for general-purpose proof systems with good prover times and flexibility.
+
+   * **Type**: Universal SNARK
+
+   * **Features**: Requires a single trusted setup for multiple programs, supports polynomial commitments. Can use FRI for post-quantum security.
+
+   * **Use Case**: Suitable for general-purpose proof systems with good prover times and flexibility.
+
 3. **zkSTARK**:
-    - **Type**: Transparent SNARK
-    - **Features**: Does not need a trusted setup, has larger proof sizes but offers post-quantum security. Utilizes the FRI commitment scheme.
-    - **Use Case**: Suitable for transparent and scalable applications where a trusted setup is a concern.
+
+   * **Type**: Transparent SNARK
+
+   * **Features**: Does not need a trusted setup, has larger proof sizes but offers post-quantum security. Utilizes the FRI commitment scheme.
+
+   * **Use Case**: Suitable for transparent and scalable applications where a trusted setup is a concern.
+
 4. **HyperPlonk**:
-    - **Type**: An extension of Plonk
-    - **Features**: Optimizes lookups and proof aggregation with better efficiency. Uses lookup arguments to improve complex operation proofs.
-    - **Use Case**: Advanced and optimized computations requiring efficient lookups, with enhanced performance over standard Plonk.
+
+   * **Type**: An extension of Plonk
+
+   * **Features**: Optimizes lookups and proof aggregation with better efficiency. Uses lookup arguments to improve complex operation proofs.
+
+   * **Use Case**: Advanced and optimized computations requiring efficient lookups, with enhanced performance over standard Plonk.
+
 5. **Binius**:
-    - **Type**: Proof system leveraging binary fields
-    - **Features**: Focuses on hardware-friendly, binary field computations. Achieves fast proving times at the expense of larger proof sizes.
-    - **Use Case**: Best for scenarios where hardware efficiency is prioritized, and larger proofs are acceptable for faster computation.
+
+   * **Type**: Proof system leveraging binary fields
+
+   * **Features**: Focuses on hardware-friendly, binary field computations. Achieves fast proving times at the expense of larger proof sizes.
+
+   * **Use Case**: Best for scenarios where hardware efficiency is prioritized, and larger proofs are acceptable for faster computation.
