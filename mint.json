@@ -78,7 +78,7 @@
     },
     {
       "group": "Omni Rollups",
-      "pages": ["builder-marketplace/omni-rollups/build-and-deploy","builder-marketplace/omni-rollups/awesome-projects"]
+      "pages": ["builder-marketplace/omni-rollups/build-and-deploy","builder-marketplace/omni-rollups/"]
     },
     {
       "group": "Ominichain Engine",
