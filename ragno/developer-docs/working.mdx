@@ -1,0 +1,43 @@
+---
+title: 'How it Works'
+---
+### Operator onboarding
+![image.png](/images/operator-onboarding.webp)
+
+### **Steps to Onboard an Operator**:
+1. **Staking $DOJ Tokens**:
+    - The operator stakes $DOJ tokens using the `createOperator` functionality.
+    - Once the stake is made, the operator is added to the **operator set** in the Hermes chain.
+2. **Hosting Blockchain Nodes**:
+    - After onboarding, operators host blockchain nodes of their choice.
+    - These nodes are registered and managed through the **Operator Dashboard**.
+3. **Node Updates**:
+    - Whenever a new node is added or updated by an operator, the information is recorded on the Hermes chain via the dashboard.
+4. **Crawler Node Tracking**:
+    - Crawler nodes continuously monitor the Hermes chain for operator-related events, such as node changes or operator set updates.
+    - These events are filtered and stored locally by the crawler nodes to ensure efficient data querying and synchronization.
+
+### Crawler node fetching block data from operators
+
+The below component diagram depicts how crawler nodes fetch data from operators.
+
+![image.png](/images/Crawler.webp)
+
+### **Data Fetching Process**:
+
+1. **Pull-Based Mechanism**:
+    - **Crawler nodes** operate on a pull-based mechanism, periodically querying the operators for the latest blockchain data.
+2. **Hermes Pairing List**:
+    - Every **200 blocks**, the Hermes chain publishes a **Pairing List** (PL).
+    - This list assigns specific crawler nodes to operators, detailing which crawlers should query which operators for blockchain data.
+3. **Data Requests**:
+    - Based on the PL, crawler nodes fetch block and transaction data from the mapped operator's nodes.
+    - This data is then processed by the crawlers to filter Dojima cross-chain transactions, which are sent to Hermes for further validation and processing.
+
+### Pairing algorithm
+
+(TBA)
+
+### Compute units calculation
+
+(TBA)

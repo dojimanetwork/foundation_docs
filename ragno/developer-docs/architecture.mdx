@@ -1,0 +1,55 @@
+---
+title: 'Architecture'
+---
+
+![image.png](/images/ragno.webp)
+
+The main aim of ragno network(other than providing data to dojima cross-chain protocol) is to power data for several protocols in a fast, efficient and decentralised manner.
+
+### Crawler
+
+![image.png](/images/Crawler.webp)
+
+- The **crawler node** is responsible for fetching and filtering data from multiple blockchains, specifically focusing on identifying **Dojima cross-chain transactions**.
+- It operates in conjunction with a **Hermes node**, connected via a secure bridge. This enables a secure and optimized way to transfer filtered transactions to the Dojima cross-chain protocol.
+- The crawler node interacts with the network by accessing data from operator gateway servers, ensuring decentralization and efficiency.
+
+### **Operator**
+
+- **Operators** are essential participants in the Ragno Network. They host nodes from blockchains of their choice as part of the decentralized infrastructure.
+- Operators must stake a minimum number of **$DOJ tokens** to become part of the network.
+- They are rewarded in $DOJ tokens based on their contributions, particularly the data they provide to the Dojima cross-chain protocol.
+
+### Operator dashboard
+
+![image.png](/images/operator-dashboard.webp)
+
+- The **Operator Dashboard** is a critical tool that enables operators to manage their nodes and monitor their performance.
+- Key functionalities include:
+    - Registering new nodes.
+    - Monitoring node health and performance metrics.
+    - Tracking rewards earned through participation in the network.
+- Operators can securely log in using their private keys and import nodes hosted elsewhere to earn additional rewards by contributing to the Dojima cross-chain protocol.
+
+### Operator gateway server
+
+- Once an operator becomes part of the network by staking, an **operator gateway server** is automatically set up.
+- This gateway server acts as a **secure intermediary** between the operator's nodes and the crawler nodes.
+- **Key functionalities** of the gateway server include:
+    - **Authenticating requests** from crawler nodes to fetch block data.
+    - **Verifying signatures** and mapping public keys with pairing lists.
+    - **Rate limiting, authentication, and caching** to ensure efficient and fair access to the data.
+- The gateway server provides a reliable mechanism for operators to control access to their node resources while still contributing data to the Ragno Network.
+
+### Working of the above setup
+
+- **Hermes Chain** manages the identities and operations of all actors (operators and crawlers) within the cross-chain protocol.
+- **Operators** register their nodes on the Hermes chain, while **crawler nodes** interact with the operators to fetch necessary data from the blockchains.
+- Every **200 blocks**, Hermes maps crawlers to operators using a **Pairing List (PL)**:
+    - Each crawler submits a PL, which is aggregated and finalized by Hermes.
+    - The final PL is fetched by the crawlers, who can then request block data from the assigned operator servers.
+- **Data Flow**:
+    - Crawlers can only request data from operators they are mapped to via the PL.
+    - Once crawlers fetch the data, they filter for Dojima cross-chain transactions.
+    - These filtered transactions are batched and sent back to the Hermes chain for further processing.
+- **Rewards**: Operators claim their rewards for providing data, with the reward amount calculated based on the **compute units** they contribute to the network.

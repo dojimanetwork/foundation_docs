@@ -1,0 +1,42 @@
+---
+title: 'Omni Sequencer'
+---
+
+## Omni Sequencer: The Core of the Omnichain Stack
+
+The Omni Sequencer is the foundational component of the Omnichain Stack, acting as the central
+coordination layer for Omni Rollups. It ensures seamless cross-rollup execution, atomic transaction
+processing, and efficient bundling of transactions across multiple rollup environments. By integrating
+with both converted L2 rollups (e.g., Optimism, Arbitrum, zkSync, and Movement Labs rollups)
+and native Omni-rollups, the Omni Sequencer transforms them into fully interoperable Omnichain
+ecosystems.
+
+**Key Functional Modules of the Omni Sequencer**
+
+1. Simulation Module: Ensures atomic execution of transactions across multiple rollups. Simu-
+lates transactions before execution to guarantee validity and prevent failures. Reduces trans-
+action reverts by pre-validating state transitions before final submission.
+
+2. StrategyModule: Manages transaction ordering and execution logic for cross-rollup transaction
+bundles. Determines execution priorities based on efficiency, MEV considerations, and state
+dependencies. Optimizes for low-latency execution and economic efficiency.
+
+3. Omni Rollup Execution Runtime: Queries and simulates transaction execution across multi-
+ple chains. Facilitates state-aware cross-rollup communication by ensuring each transaction’s
+dependencies are met. Enhances developer experience by abstracting cross-chain execution
+complexity.
+
+4. Aggregate Mempool: Collects both bundled and individual transactions before execution. Op-
+timizes block space usage by prioritizing transactions based on gas efficiency and finality re-
+quirements. Reduces fragmentation in cross-rollup transaction processing.
+
+5. Data Availability Integration: The Omni Sequencer integrates with multiple DA layers (Data
+Availability layers) while also maintaining its own Omnichain Data Availability Layer. En-
+hances data integrity, accessibility, and redundancy across connected rollups. Ensures seamless
+rollup-to-rollup communication without external dependencies on third-party DA layers.
+
+By anchoring the Omnichain Stack, the Omni Sequencer enables true interoperability across rollups.
+It bridges fragmented L2 ecosystems into a unified execution environment, ensuring that transactions
+across different chains execute atomically, efficiently, and securely. With its integration of cross-
+rollup mempools, simulation layers, and DA enhancements, the Omni Sequencer is a game-changer
+in modular blockchain architecture.
