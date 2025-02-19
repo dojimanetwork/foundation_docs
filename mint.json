@@ -24,7 +24,7 @@
     },
     {
       "name": "Omni Rollup",
-      "url": "builder-marketplace/omni-rollups"
+      "url": "omni-rollups"
     },
     {
       "name": "Proof Network",
@@ -50,7 +50,7 @@
         "ragno-network",
         "proof-network",
         "omnichain-stack",
-        "builder-marketplace"
+        "Builder-Marketplace"
       ]
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "group": "Omni Rollups",
-      "pages": ["builder-marketplace/omni-rollups/overview","builder-marketplace/omni-rollups/types-of-rollups","builder-marketplace/omni-rollups/transaction-flow","builder-marketplace/omni-rollups/build-and-deploy", "builder-marketplace/omni-rollups/awesome-projects"]
+      "pages": ["omni-rollups/overview","omni-rollups/types-of-rollups","omni-rollups/transaction-flow","omni-rollups/build-and-deploy", "omni-rollups/awesome-projects"]
     },
     {
       "group": "Ominichain Engine",
