@@ -23,6 +23,10 @@
       "url": "builder-marketplace"
     },
     {
+      "name": "Omni Rollup",
+      "url": "builder-marketplace/omni-rollups"
+    },
+    {
       "name": "Proof Network",
       "url": "proof-network"
     },
@@ -66,11 +70,19 @@
     },
     {
       "group": "Overview",
-      "pages": ["proof-network/overview","proof-network/zkVM","proof-network/proof-systems","proof-network/modular-zkVM"]
+      "pages": ["proof-network/overview","proof-network/zkVM","proof-network/proof-systems","proof-network/modular-zkVM","proof-network/jolt-zkVM"]
     },
     {
       "group": "Overview",
-      "pages": ["builder-marketplace/overview","builder-marketplace/tees","builder-marketplace/proof-generation"]
+      "pages": ["builder-marketplace/overview"]
+    },
+    {
+      "group": "Intent Standardization",
+      "pages": ["builder-marketplace/intent-standardization/overview","builder-marketplace/intent-standardization/standardization-layer","builder-marketplace/intent-standardization/chain-specific-adapters"]
+    },
+    {
+      "group": "Solver Network",
+      "pages": ["builder-marketplace/solver-network/overview","builder-marketplace/solver-network/netting","builder-marketplace/solver-network/liquidity-rebalancing","builder-marketplace/solver-network/transaction-flow"]
     },
     {
       "group": "Omni Dapps",
@@ -78,7 +90,7 @@
     },
     {
       "group": "Omni Rollups",
-      "pages": ["builder-marketplace/omni-rollups/build-and-deploy", "builder-marketplace/omni-rollups/awesome-projects"]
+      "pages": ["builder-marketplace/omni-rollups/overview","builder-marketplace/omni-rollups/types-of-rollups","builder-marketplace/omni-rollups/transaction-flow","builder-marketplace/omni-rollups/build-and-deploy", "builder-marketplace/omni-rollups/awesome-projects"]
     },
     {
       "group": "Ominichain Engine",

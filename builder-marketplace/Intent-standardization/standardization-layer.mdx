@@ -1,0 +1,22 @@
+---
+title: 'Standardization Layer'
+---
+
+
+The Standardization Layer acts as the universal interpreter for intents, ensuring that any user-
+submitted intent—whether from Ethereum, Solana, Avalanche, Cosmos, or other L1s—is converted
+into a common format. This allows solvers to process and optimize execution without being con-
+strained by chain-specific differences.
+
+<img className="block h-full" src="/images/Intent.png" />
+
+The unified intent format will include:
+- Intent Type: Swap, bridge, stake, borrow, lend, liquidate, etc.
+- Source and Destination Chains
+- Assets and Amounts
+- Execution Preferences: Slippage tolerance, gas fee preferences, execution deadline.
+- Security Conditions: Required confirmations, fraud-proof verification, authentication.
+
+The conversion process is handled through intelligent parsers that extract intent data from L1-
+native formats (such as Ethereum calldata, Solana transaction instructions, or Cosmos IBC packets)
+and translate it into the standardized format.
