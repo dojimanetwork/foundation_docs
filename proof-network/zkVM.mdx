@@ -1,0 +1,31 @@
+---
+title: 'zkVM'
+---
+
+A zkVM (Zero-Knowledge Virtual Machine) is a system that allows developers to prove that a program has executed correctly without revealing any details about the actual computation. Imagine it like this: you write a program in Rust (or another LLVM-compatible language) that performs a calculation, such as finding the 10th Fibonacci number.
+
+Here's how it works:
+
+1. **Write and Compile the Program**: Developers write a program in a language like **Rust** (or any other LLVM-compatible language). The program is compiled into an executable format, such as an **ELF file** (Executable and Linkable Format).
+
+2. **Key Setup (Optional in Some Systems):**  Traditional zkVMs often require a **key setup phase**, one for proving and another for verifying.
+
+3. **Generate a Proof**: The zkVM runs the program with input data, generating a proof that the computation was done correctly.
+
+4. **Verify the Proof**: Anyone can then use the verification key to check the proof, confirming that the program's output is correct without seeing the actual input or intermediate steps.
+
+This process ensures privacy and trustworthiness in various applications, making it possible to verify complex computations securely.
+
+### **Keyless zkVM Systems:**
+
+Some modern zkVM systems, such as those based on **universal SNARKs (e.g., Halo2, PLONK)**, **STARKs**, or other advancements, eliminate the **key setup step**. These systems are often referred to as **transparent** zkVMs because they don't rely on a trusted setup phase.
+
+In such systems:
+
+1. &#x20;**No Trusted Setup:** Cryptographic security is achieved without pre-generated keys, reducing trust assumptions and enhancing security.
+
+2. **Flexible Proofs:** These systems support generating proofs for any computation without requiring a new setup phase for each program.
+
+3. **Examples of Transparent zkVMs:**
+   **-**  zk-STARK-based zkVMs: Use hash-based commitments, offering scalability and removing the need for trusted setups.
+   \- PLONK-based zkVMs: Use a universal setup that works for multiple computations, making the system more versatile.

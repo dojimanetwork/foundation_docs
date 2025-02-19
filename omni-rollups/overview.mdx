@@ -1,0 +1,33 @@
+---
+title: 'Overview'
+---
+
+The Omni Rollup is a robust framework designed to facilitate cross-chain transactions across multiple
+Layer 1 (L1) blockchains within the Omnichain ecosystem. It deploys smart contracts on L1 chains
+that support them, managing transaction validation, state updates, and communication with the
+rollup. For L1 chains that do not support smart contracts, Omni Rollup uses direct addresses(vaults)
+to handle as set custody and processing. Execution with in the rollup can be configured in two ways: a
+shared execut or maintaining isolated states for each supported chain,ensuring resource optimization
+and centralized logic, or separate executors for each chain, which provide high isolation and allow
+chain-specific customizations.
+
+At the core of its operation is the Omni Sequencer, a shared transaction coordinator responsible
+for organizing and ordering transactions. The sequencer collects transactions from various mempools
+and solvers, bundles them into batches, and determines a global order. A commitment for this order
+is created by hashing the ordered list of transaction bundles, producing a cryptographic digest that is
+published on a Data Availability (DA) layer. This commitment ensures that all participants can verify
+the integrity of the transaction order without accessing all transaction data. Each bundled transaction
+follows a specific format, comprising the source and destination chain IDs, the transaction payload,
+a timestamp, and a unique nonce to prevent replay attacks.
+
+<img className=" h-full w-full" src="/images/rollup.png" />
+
+Once the order is committed, the Omni Sequencer distributes the bundled transactions to the
+respective rollups for block creation. Each rollup verifies the transaction order against the commit-
+ment on the DA layer and uses the Prover network to validate state transitions. The Prover Network
+generates zero-knowledge (zk) proofs to confirm state correctness and prevent fraudulent updates.
+The rollup then updates the state of its respective chain and sends the updated state along with the
+zk proof to the L1 chain for final inclusion in its block. For non-contract-based chains, the proof will
+be sent to a client for verification. This architecture ensures scalability by efficiently bundling and
+ordering transactions,security through zk proofs and commitments,and interoperability by supporting both contract-enabled and other chains. The flexible executor configurations enable adaptation
+to diverse performance and isolation needs, making the Omni Rollup a critical component of the Omnichain web for seamless cross-chain transaction processing.

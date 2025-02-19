@@ -1,0 +1,109 @@
+{
+  "name": "Dojima Docs",
+  "logo": {
+    "dark": "/logo/logo-dark.png",
+    "light": "/logo/logo-light.png"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#8000FF",
+    "light": "#8000FF",
+    "dark": "#8000FF",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  },
+  "primaryTab": {
+    "name": "Home"
+  },
+  "tabs": [
+    {
+      "name": "Builder Marketplace",
+      "url": "builder-marketplace"
+    },
+    {
+      "name": "Omni Rollup",
+      "url": "omni-rollups"
+    },
+    {
+      "name": "Proof Network",
+      "url": "proof-network"
+    },
+    {
+      "name": "Omnichain Engine",
+      "url": "omnichain-engine"
+    },
+    {
+      "name": "Ragno",
+      "url": "ragno"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Overview",
+      "pages": ["introduction", "build-omnichain-webstack"]
+    },
+    {
+      "group": "Omnichain Web",
+      "pages": [
+        "ragno-network",
+        "proof-network",
+        "omnichain-stack",
+        "buildermarketplace"
+      ]
+    },
+    {
+      "group": "Ragno Introduction",
+      "pages": ["ragno/overview"]
+    },
+    {
+      "group": "Developers",
+      "pages": [
+        "ragno/developer-docs/architecture",
+        "ragno/developer-docs/working"
+      ]
+    },
+    {
+      "group": "Join Us",
+      "pages": ["ragno/add-your-chain"]
+    },
+    {
+      "group": "Overview",
+      "pages": ["proof-network/overview","proof-network/zkVM","proof-network/proof-systems","proof-network/modular-zkVM","proof-network/jolt-zkVM"]
+    },
+    {
+      "group": "Overview",
+      "pages": ["builder-marketplace/overview"]
+    },
+    {
+      "group": "Intent Standardization",
+      "pages": ["builder-marketplace/intent-standardization/overview","builder-marketplace/intent-standardization/standardization-layer","builder-marketplace/intent-standardization/chain-specific-adapters"]
+    },
+    {
+      "group": "Solver Network",
+      "pages": ["builder-marketplace/solver-network/overview","builder-marketplace/solver-network/netting","builder-marketplace/solver-network/liquidity-rebalancing","builder-marketplace/solver-network/transaction-flow"]
+    },
+    {
+      "group": "Omni Dapps",
+      "pages": ["builder-marketplace/omni-dapps/build-project","builder-marketplace/omni-dapps/deploy-project"]
+    },
+    {
+      "group": "Omni Rollups",
+      "pages": ["omni-rollups/overview","omni-rollups/types-of-rollups","omni-rollups/transaction-flow","omni-rollups/build-and-deploy", "omni-rollups/awesome-projects"]
+    },
+    {
+      "group": "Ominichain Engine",
+      "pages": ["omnichain-engine/overview","omnichain-engine/dojima-chain","omnichain-engine/hermes-layer","omnichain-engine/modules"]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://twitter.com/dojimanetwork",
+    "github": "https://github.com/dojimanetwork",
+    "linkedin": "https://www.linkedin.com/company/81682016/admin/dashboard/",
+    "youtube": "https://www.youtube.com/@DojimaNetwork",
+    "medium": "https://medium.com/dojimanetwork",
+    "telegram": "https://t.me/dojimanetworkofficial",
+    "discord": "https://discord.com/invite/6fQWukdgbM"
+  }
+}
